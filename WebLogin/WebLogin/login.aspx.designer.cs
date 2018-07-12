@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AptechPortalDemo {
+namespace WebLogin {
     
     
-    public partial class Default {
+    public partial class login {
         
         /// <summary>
         /// form1 control.
