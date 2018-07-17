@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="App2.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel>
+            <TextBlock Text="SELECT SUBJECT" FontSize="25" FontWeight="Bold" TextAlignment="Center"/>
+            <ComboBox x:Name="SubList" SelectionChanged="combox_SelectionChanged">
+               
+            </ComboBox>
+                <TextBlock x:Name="txtSubject" Text="none"  />
+            <Button Content="Start" Click="Button_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>

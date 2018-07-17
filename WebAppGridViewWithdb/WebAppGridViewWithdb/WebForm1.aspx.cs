@@ -29,6 +29,8 @@ namespace WebAppGridViewWithdb
             GridView1.DataBind();
         }
 
+      
+
         protected void OnRowEditing(object sender, GridViewEditEventArgs e)
         {
             GridView1.EditIndex = e.NewEditIndex;
@@ -43,7 +45,11 @@ namespace WebAppGridViewWithdb
 
         protected void OnRowUpdating(object sender, GridViewUpdateEventArgs e)
         {
-
-        }
+            GridViewRow dRow = GridView1.Rows[e.RowIndex] as GridViewRow;
+            TextBox txtName =  dRow.Cells[1].Controls[0] as TextBox;
+            TextBox txtId = dRow.Cells[2].Controls[0] as TextBox;
+            int id = Int32.Parse(GridView1.DataKeys[e.RowIndex].Value.ToString());
+            String s = txtName.Text;
+         }
     }
 }

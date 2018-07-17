@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns ="False" OnRowCancelingEdit="OnCancel" OnRowEditing="OnRowEditing" OnRowUpdating="OnRowUpdating" >
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns ="False" OnRowCancelingEdit="OnCancel"  OnRowEditing="OnRowEditing" OnRowUpdating="OnRowUpdating" >
             <Columns>
                 <asp:BoundField DataField="STDID" HeaderText="STUDENT ID" ReadOnly="true"/>
                 <asp:BoundField DataField="STDNAME" HeaderText="STUDENT NAME" />
