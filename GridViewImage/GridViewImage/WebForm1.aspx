@@ -26,6 +26,7 @@
         <br />
         <asp:Button ID="Button1" runat="server" Text="Add Data" OnClick="Button1_Click" />
          <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Show" Width="66px" />
+        <asp:Button ID="Button3" runat="server" Text="Button" OnClick="Button3_Click" />
          <br />
         <asp:GridView ID="GridView1" runat="server" Width="100%"  AutoGenerateColumns="False">
             <Columns>
@@ -39,7 +40,9 @@
             </Columns>
 
         </asp:GridView>
+
     </div>
+      
     </form>
 </body>
 </html>

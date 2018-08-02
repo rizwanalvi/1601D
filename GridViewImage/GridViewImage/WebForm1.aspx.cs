@@ -35,11 +35,22 @@ namespace GridViewImage
             SqlCommand _cmd = new SqlCommand("SELECT * FROM StudnInfo", _sqlconn);
              GridView1.DataSource =  _cmd.ExecuteReader();
             GridView1.DataBind();
+           
         }
 
         public String GetImage(Object Obj) {
             byte[] img = (byte[])Obj;
             return "data:image/png;base64," + Convert.ToBase64String(img);
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            SqlConnection _sqlconn = new SqlConnection(@"Data Source=FACULTY18;Initial Catalog=1601DASP;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+            _sqlconn.Open();
+            SqlCommand _cmd = new SqlCommand("SELECT * FROM StudnInfo", _sqlconn);
+            
+            //ListView1.DataSource = GridView1.DataSource;
+            //ListView1.DataBind();
         }
     }
 }

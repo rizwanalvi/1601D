@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Navigation_SiteMap.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style>
+       .menu {
+             list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+
+        <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1"  EnableViewState="False" CssClass="menu" IncludeStyleBlock="true" Orientation="Horizontal" StaticDisplayLevels="2">
+        </asp:Menu>
+
+        <asp:SiteMapDataSource runat="server" ID="SiteMapDataSource1" ></asp:SiteMapDataSource>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
