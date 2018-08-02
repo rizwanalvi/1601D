@@ -11,7 +11,18 @@ namespace WebApplication2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Uname"] == null) {
+
+                Response.Redirect("LoginForm.aspx");
+            }
           
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Response.Redirect("LoginForm.aspx");
+
         }
     }
 }
