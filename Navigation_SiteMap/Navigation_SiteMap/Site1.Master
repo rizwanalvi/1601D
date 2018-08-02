@@ -6,11 +6,11 @@
 <head runat="server">
     <title></title>
     <style>
-       .menu {
-             list-style: none;
+       * {
+             
     margin: 0px;
     padding: 0px;
-    width: auto;
+  
         }
     </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -20,7 +20,14 @@
     <form id="form1" runat="server">
     <div>
 
-        <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1"  EnableViewState="False" CssClass="menu" IncludeStyleBlock="true" Orientation="Horizontal" StaticDisplayLevels="2">
+        <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1"  EnableViewState="False" CssClass="menu" Orientation="Horizontal" StaticDisplayLevels="2" BackColor="#B5C7DE" DynamicHorizontalOffset="4" Font-Names="Verdana" Font-Size="15px" ForeColor="#284E98" StaticSubMenuIndent="10px" Width="100%">
+            <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+            <DynamicMenuItemStyle HorizontalPadding="15px" VerticalPadding="15px" Width="100%" />
+            <DynamicMenuStyle BackColor="#B5C7DE" />
+            <DynamicSelectedStyle BackColor="#507CD1" />
+            <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+            <StaticMenuItemStyle HorizontalPadding="15px" VerticalPadding="15px" />
+            <StaticSelectedStyle BackColor="#507CD1" />
         </asp:Menu>
 
         <asp:SiteMapDataSource runat="server" ID="SiteMapDataSource1" ></asp:SiteMapDataSource>
