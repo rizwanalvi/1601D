@@ -5,14 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace WebApplication3
+namespace WebApplication2
 {
-    public partial class Site1 : System.Web.UI.MasterPage
+    public partial class WebForm3 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-                
-            
+
         }
     }
 }

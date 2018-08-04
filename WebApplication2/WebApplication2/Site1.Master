@@ -26,9 +26,37 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
-         
+        <asp:Repeater ID="Repeater1" runat="server"  >
+            <HeaderTemplate>
+                
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+                     <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+            </HeaderTemplate>
+            <ItemTemplate>
+             <ul class="navbar-nav navbar-sidenav" >
+
+               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+          <a class="nav-link" href="index.html">
+            <i class="fa fa-fw fa-dashboard"></i>
+            <span class="nav-link-text"><asp:Label ID="Label1" runat="server" Text='<%# Eval("MNAME") %>'></asp:Label></span>
+          </a>
+        </li>
+        
+                </ul>
+               </ItemTemplate>
+            <FooterTemplate>
+                </ul>
+            </FooterTemplate>
+        </asp:Repeater>
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-          <asp:Menu ID="NavigationMenu" Cssclass="navbar-nav navbar-sidenav" runat="server" EnableViewState="False" Orientation="Vertical" StaticDisplayLevels="2" BackColor="#B5C7DE" DynamicHorizontalOffset="4" Font-Names="Verdana" Font-Size="15px" ForeColor="White" Width="100%" >
+          
+        
+
+<%--          <asp:Menu ID="NavigationMenu" Cssclass="navbar-nav navbar-sidenav" runat="server" EnableViewState="False" Orientation="Vertical" StaticDisplayLevels="2" BackColor="#B5C7DE" DynamicHorizontalOffset="4" Font-Names="Verdana" Font-Size="15px" ForeColor="White" Width="100%" >
            <DynamicHoverStyle  ForeColor="White" />
             <DynamicMenuItemStyle HorizontalPadding="15px" VerticalPadding="15px"  />
             <DynamicMenuStyle BackColor="#B5C7DE" Width="100%"/>
@@ -37,23 +65,9 @@
             <StaticMenuItemStyle HorizontalPadding="15px" VerticalPadding="15px"   />
             <StaticSelectedStyle />
           </asp:Menu>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          <a class="nav-link" href="index.html">
-            <i class="fa fa-fw fa-dashboard"></i>
-            <span class="nav-link-text">Dashboard</span>
-          </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-          <a class="nav-link" href="charts.html">
-            <i class="fa fa-fw fa-area-chart"></i>
-            <span class="nav-link-text">Charts</span>
-          </a>
-        </li>
-
-         
 
 
-          <asp:SiteMapDataSource runat="server" ID="SiteMapDataSource1"></asp:SiteMapDataSource>
+          <asp:SiteMapDataSource runat="server" ID="SiteMapDataSource1"></asp:SiteMapDataSource>--%>
       </ul>
       <ul class="navbar-nav sidenav-toggler" >
         <li class="nav-item">
