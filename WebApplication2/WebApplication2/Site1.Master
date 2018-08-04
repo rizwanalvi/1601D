@@ -26,7 +26,17 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
+         
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+          <asp:Menu ID="NavigationMenu" Cssclass="navbar-nav navbar-sidenav" runat="server" EnableViewState="False" Orientation="Vertical" StaticDisplayLevels="2" BackColor="#B5C7DE" DynamicHorizontalOffset="4" Font-Names="Verdana" Font-Size="15px" ForeColor="White" Width="100%" >
+           <DynamicHoverStyle  ForeColor="White" />
+            <DynamicMenuItemStyle HorizontalPadding="15px" VerticalPadding="15px"  />
+            <DynamicMenuStyle BackColor="#B5C7DE" Width="100%"/>
+            <DynamicSelectedStyle BackColor="#507CD1" />
+            <StaticHoverStyle  ForeColor="Gray" />
+            <StaticMenuItemStyle HorizontalPadding="15px" VerticalPadding="15px"   />
+            <StaticSelectedStyle />
+          </asp:Menu>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
           <a class="nav-link" href="index.html">
             <i class="fa fa-fw fa-dashboard"></i>
@@ -40,21 +50,12 @@
           </a>
         </li>
 
-          <asp:Menu ID="NavigationMenu" runat="server" EnableViewState="False" IncludeStyleBlock="False"  StaticDisplayLevels="2" >
-              <DynamicItemTemplate>
-                  <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-          <a class="nav-link" href="charts.html">
-            <i class="fa fa-fw fa-area-chart"></i>
-            <span class="nav-link-text"> </span>
-          </a>
-        </li>
-                 
-              </DynamicItemTemplate>
-          </asp:Menu>
+         
+
 
           <asp:SiteMapDataSource runat="server" ID="SiteMapDataSource1"></asp:SiteMapDataSource>
       </ul>
-      <ul class="navbar-nav sidenav-toggler">
+      <ul class="navbar-nav sidenav-toggler" >
         <li class="nav-item">
           <a class="nav-link text-center" id="sidenavToggler">
             <i class="fa fa-fw fa-angle-left"></i>

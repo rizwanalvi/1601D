@@ -13,9 +13,11 @@ namespace WebApplication2
         {
             if (Session["Uname"] == null) {
 
-                Response.Redirect("LoginForm.aspx");
+               // Response.Redirect("LoginForm.aspx");
             }
-          
+            NavigationMenu.Items.Add(new MenuItem("Home", "", "", "WebForm1.aspx"));
+            NavigationMenu.Items.Add(new MenuItem("Product", "", "", "product.aspx"));
+            NavigationMenu.Items.Add(new MenuItem("Contact Us", "", "", "home.aspx"));
         }
 
         protected void Button1_Click(object sender, EventArgs e)
