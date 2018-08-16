@@ -23,6 +23,7 @@ namespace GridViewImage
             _cmd.Parameters.AddWithValue("@STDFNAME", TextBox2.Text);
             _cmd.Parameters.AddWithValue("@BATCHNO", TextBox3.Text);
             _cmd.Parameters.AddWithValue("@SEMID", TextBox4.Text);
+          
             _cmd.Parameters.AddWithValue("@IMG", FileUpload1.FileBytes);
             _cmd.ExecuteNonQuery();
 

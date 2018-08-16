@@ -27,10 +27,16 @@
             </FooterTemplate>
         </asp:Repeater>
        
-        <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+        <asp:GridView ID="GridView1" runat="server"  AutoGenerateColumns="False" OnSelectedIndexChanged="OnSelected">
+            <Columns>
+                <asp:BoundField DataField="UN_NAME" HeaderText="UNIVERSITY" />
+            </Columns>
+        </asp:GridView>
          <asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList>
-        <asp:GridView ID="GridView2" runat="server"></asp:GridView>
+        <asp:GridView ID="GridView2" runat="server" ></asp:GridView>
+        <asp:DetailsView ID="DetailsView1" runat="server" width="100%"></asp:DetailsView>
     </div>
     </form>
 </body>
+
 </html>

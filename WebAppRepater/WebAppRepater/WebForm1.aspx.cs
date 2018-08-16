@@ -14,12 +14,12 @@ namespace WebAppRepater
         {
             if (!IsPostBack) { 
             SqlConnection _conn = new SqlConnection(@"Data Source=FACULTY18;Initial Catalog=1601DASP;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
-            SqlDataAdapter dAdapter = new SqlDataAdapter("SELECT * FROM UN_LIST", _conn);
+            SqlDataAdapter dAdapter = new SqlDataAdapter("spGetUniList", _conn);
             DataTable dTable = new DataTable();
             dAdapter.Fill(dTable);
             Repeater1.DataSource = dTable;
             Repeater1.DataBind();
-
+            
 
                 GridView1.DataSource = dTable;
                 GridView1.DataBind();
@@ -27,8 +27,20 @@ namespace WebAppRepater
                 DropDownList1.DataSource = dTable;
                 DropDownList1.DataTextField = "UN_NAME";
                 DropDownList1.DataBind();
+               
+
 
             }
+        }
+
+        protected void OnSelected(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Select(object sender, CommandEventArgs e)
+        {
+          
         }
     }
 }
